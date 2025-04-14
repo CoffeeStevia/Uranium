@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Uranium.Controls.FolderItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uranium.Controls"
+             mc:Ignorable="d" Width="161" Height="Auto" Margin="1">
+    <UserControl.Resources>
+        <FontFamily x:Key="Font1">
+            pack://application:,,,/Fonts/#M PLUS Rounded 1c Bold
+        </FontFamily>
+    </UserControl.Resources>
+    <Grid x:Name="MainGrid" Background="Transparent"  IsHitTestVisible="True" Margin="1,0,1,0" Height="Auto" Width="159">
+        <Border MouseLeftButtonDown="Grid_MouseLeftButtonDown" CornerRadius="3" IsHitTestVisible="True" Cursor="Hand" x:Name="MainBorder" Background="#141929" BorderBrush="Transparent" BorderThickness="1" Loaded="MainBorder_Loaded" Margin="0,0,0,-5" Height="32" VerticalAlignment="Top" Width="159"  >
+            <Grid  Margin="0,-1,-1,-1" Height="32" VerticalAlignment="Top" >
+                <Grid Margin="0,0,2,0" Grid.Row="0" Height="32">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Fill="#8A8A8A" Data="M3 8.2C3 7.07989 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H9.67452C10.1637 5 10.4083 5 10.6385 5.05526C10.8425 5.10425 11.0376 5.18506 11.2166 5.29472C11.4184 5.4184 11.5914 5.59135 11.9373 5.93726L12.0627 6.06274C12.4086 6.40865 12.5816 6.5816 12.7834 6.70528C12.9624 6.81494 13.1575 6.89575 13.3615 6.94474C13.5917 7 13.8363 7 14.3255 7H17.8C18.9201 7 19.4802 7 19.908 7.21799C20.2843 7.40973 20.5903 7.71569 20.782 8.09202C21 8.51984 21 9.0799 21 10.2V15.8C21 16.9201 21 17.4802 20.782 17.908C20.5903 18.2843 20.2843 18.5903 19.908 18.782C19.4802 19 18.9201 19 17.8 19H6.2C5.07989 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2Z"  Margin="9,10,0,11" Stretch="Fill" HorizontalAlignment="Left" Width="13" Grid.ColumnSpan="2"/>
+                    <TextBlock Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" x:Name="NameText" Foreground="#8A8A8A" FontFamily="{StaticResource Font1}" FontSize="15" Text="Folder" Margin="13,0,0,0" HorizontalAlignment="Left" Height="18" TextTrimming="CharacterEllipsis" FontWeight="Bold" />
+                    <Path Visibility="Hidden" StrokeThickness="1.5" Fill="#8A8A8A" Data="M3 8.2C3 7.07989 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H9.67452C10.1637 5 10.4083 5 10.6385 5.05526C10.8425 5.10425 11.0376 5.18506 11.2166 5.29472C11.4184 5.4184 11.5914 5.59135 11.9373 5.93726L12.0627 6.06274C12.4086 6.40865 12.5816 6.5816 12.7834 6.70528C12.9624 6.81494 13.1575 6.89575 13.3615 6.94474C13.5917 7 13.8363 7 14.3255 7H17.8C18.9201 7 19.4802 7 19.908 7.21799C20.2843 7.40973 20.5903 7.71569 20.782 8.09202C21 8.51984 21 9.0799 21 10.2V15.8C21 16.9201 21 17.4802 20.782 17.908C20.5903 18.2843 20.2843 18.5903 19.908 18.782C19.4802 19 18.9201 19 17.8 19H6.2C5.07989 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2Z" Margin="3,4,0,6" Stretch="Fill" Height="10" Width="12" HorizontalAlignment="Left"/>
+                    <Border Background="#FF1D5DF0" Visibility="Hidden" CornerRadius="360" Margin="114,5,4,6" Width="7" Height="7"/>
+
+                </Grid>
+            </Grid>
+        </Border>
+        <Border Margin="15,32,0,0" HorizontalAlignment="Left" Height="Auto" Width="144">
+            <StackPanel x:Name="FOlderStack" Height="Auto">
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

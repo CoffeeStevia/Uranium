@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Uranium.Controls.PopularScript"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uranium.Controls"
+             mc:Ignorable="d" Height="130" Width="215" Loaded="UserControl_Loaded" MouseWheel="UserControl_MouseWheel">
+    <Border CornerRadius="5" BorderThickness="1" Margin="2">
+        <!--#region Skibidi Gradient-->
+        <Border.BorderBrush>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF232A42"/>
+                <GradientStop Color="#FF586BA8" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <ImageBrush x:Name="BackImage"/>
+        </Border.Background>
+        <!--#endregion-->
+        <Grid>
+            <Border Margin="0,108,0,0" Background="#0E111B" CornerRadius="0,0,5,5" BorderThickness="0,1,0,0">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="1">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF586BA8"/>
+                        <GradientStop Color="#22232A42" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Grid>
+                    <Label x:Name="ScriptNameLabel" Content="Script Name" FontSize="9" FontFamily="Outfit Medium" Foreground="#C7C7C7" Margin="4,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="209" RenderTransformOrigin="0.5,0.5" Height="21"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

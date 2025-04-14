@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Profile.jpg" />
+    <None Remove="Fonts\MPLUSRounded1c-Black.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-Bold.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-ExtraBold.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-Light.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-Medium.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-Regular.ttf" />
+    <None Remove="Fonts\MPLUSRounded1c-Thin.ttf" />
+    <None Remove="Fonts\WorkSans-Black.ttf" />
+    <None Remove="Fonts\WorkSans-BlackItalic.ttf" />
+    <None Remove="Fonts\WorkSans-Bold.ttf" />
+    <None Remove="Fonts\WorkSans-BoldItalic.ttf" />
+    <None Remove="Fonts\WorkSans-ExtraBold.ttf" />
+    <None Remove="Fonts\WorkSans-ExtraBoldItalic.ttf" />
+    <None Remove="Fonts\WorkSans-ExtraLight.ttf" />
+    <None Remove="Fonts\WorkSans-ExtraLightItalic.ttf" />
+    <None Remove="Fonts\WorkSans-Italic-VariableFont_wght.ttf" />
+    <None Remove="Fonts\WorkSans-Italic.ttf" />
+    <None Remove="Fonts\WorkSans-Light.ttf" />
+    <None Remove="Fonts\WorkSans-LightItalic.ttf" />
+    <None Remove="Fonts\WorkSans-Medium.ttf" />
+    <None Remove="Fonts\WorkSans-MediumItalic.ttf" />
+    <None Remove="Fonts\WorkSans-Regular.ttf" />
+    <None Remove="Fonts\WorkSans-SemiBold.ttf" />
+    <None Remove="Fonts\WorkSans-SemiBoldItalic.ttf" />
+    <None Remove="Fonts\WorkSans-Thin.ttf" />
+    <None Remove="Fonts\WorkSans-ThinItalic.ttf" />
+    <None Remove="Fonts\WorkSans-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="App.xaml" />
+    <Resource Include="Assets\Profile.jpg" />
+    <Resource Include="Fonts\MPLUSRounded1c-Black.ttf" />
+    <Resource Include="Fonts\MPLUSRounded1c-Bold.ttf" />
+    <Resource Include="Fonts\MPLUSRounded1c-ExtraBold.ttf" />
+    <Resource Include="Fonts\MPLUSRounded1c-Light.ttf" />
+    <Resource Include="Fonts\MPLUSRounded1c-Medium.ttf" />
+    <Resource Include="Fonts\MPLUSRounded1c-Regular.ttf" />
+    <Resource Include="Fonts\MPLUSRounded1c-Thin.ttf" />
+    <Resource Include="Fonts\WorkSans-Black.ttf" />
+    <Resource Include="Fonts\WorkSans-BlackItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-Bold.ttf" />
+    <Resource Include="Fonts\WorkSans-BoldItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-ExtraBold.ttf" />
+    <Resource Include="Fonts\WorkSans-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-ExtraLight.ttf" />
+    <Resource Include="Fonts\WorkSans-ExtraLightItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-Italic-VariableFont_wght.ttf" />
+    <Resource Include="Fonts\WorkSans-Italic.ttf" />
+    <Resource Include="Fonts\WorkSans-Light.ttf" />
+    <Resource Include="Fonts\WorkSans-LightItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-Medium.ttf" />
+    <Resource Include="Fonts\WorkSans-MediumItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-Regular.ttf" />
+    <Resource Include="Fonts\WorkSans-SemiBold.ttf" />
+    <Resource Include="Fonts\WorkSans-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-Thin.ttf" />
+    <Resource Include="Fonts\WorkSans-ThinItalic.ttf" />
+    <Resource Include="Fonts\WorkSans-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3171-prerelease" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
