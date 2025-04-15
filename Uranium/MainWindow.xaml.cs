@@ -306,6 +306,10 @@ public partial class MainWindow : Window
         {
 
         };
+        if (TabPanel.Children.Count == 0)
+        {
+            browser.Visibility = Visibility.Hidden;
+        }
     }
     internal async Task<string> GetText()
     {
