@@ -393,6 +393,9 @@ public partial class MainWindow : Window
     }
     public void FillTreeView(StackPanel treeView, StackPanel TopStack, string directory, FolderItemControl ParentSubFolderItem = null)
     {
+        if (!Directory.Exists("Scripts"))
+            Directory.CreateDirectory("Scripts");
+
         treeView.Children.Clear();
         string[] directories = Directory.GetDirectories(directory);
         foreach (string path in directories)
