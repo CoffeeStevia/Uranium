@@ -22,20 +22,28 @@
     <WindowChrome.WindowChrome>
         <WindowChrome ResizeBorderThickness="14" CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
-    <Border x:Name="MainWindowBorder" Background="#0E111B" CornerRadius="5">
+    <Border x:Name="MainWindowBorder" Background="#0E111B" BorderBrush="#FF3e3e40" BorderThickness="1" CornerRadius="5">
         <Grid x:Name="MainWindowGrid">
             <Border x:Name="TopBar" Margin="0,0,0,407" CornerRadius="5,5,0,0" Background="#0A0D16" MouseLeftButtonDown="TopBar_MouseLeftButtonDown" Height="43" VerticalAlignment="Top">
                 <Grid>
                     <!--#region Window Buttons & Logo-->
                     <Image Margin="8,0,749,0" Source="/Assets/Logo.png" Height="43" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <Grid x:Name="CloseBtn" IsHitTestVisible="True" Cursor="Hand" Background="Transparent" MouseLeftButtonDown="CloseClick" Height="23" VerticalAlignment="Center" Margin="764,0,10,0" HorizontalAlignment="Right">
-                        <Path x:Name="ClosePath" Fill="#353C50" Data="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" Stretch="Fill" Margin="8,6,7,6" Width="11" Height="11" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Grid x:Name="CloseBtn" Cursor="Hand" Background="Transparent" MouseLeftButtonDown="CloseClick" Height="30" Width="30" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
+                        <Viewbox Stretch="Uniform" Width="11" Height="11" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path Fill="#353C50" Data="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"/>
+                        </Viewbox>
                     </Grid>
-                    <Grid x:Name="MaxBtn" Margin="732,0,42,0" IsHitTestVisible="True" Cursor="Hand" Background="Transparent" MouseLeftButtonDown="MaxClick" Height="23" VerticalAlignment="Center" HorizontalAlignment="Right">
-                        <Path x:Name="MaxPath" Fill="#353C50" Data="M22 5C22 3.34315 20.6569 2 19 2H5C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5ZM20 5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5Z" Stretch="Fill" Margin="8,7,8,6" Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid x:Name="MaxBtn" Cursor="Hand" Background="Transparent" MouseLeftButtonDown="MaxClick" Height="30" Width="30" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,42,0">
+                        <Viewbox Stretch="Uniform" Width="10" Height="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path Fill="#353C50" Data="M22 5C22 3.34315 20.6569 2 19 2H5C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5ZM20 5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5Z"/>
+                        </Viewbox>
                     </Grid>
-                    <Grid x:Name="MinBtn" Margin="702,0,72,0" IsHitTestVisible="True" Cursor="Hand" Background="Transparent" MouseLeftButtonDown="MinClick" Height="23" VerticalAlignment="Center" HorizontalAlignment="Right">
-                        <Path x:Name="MinPath" Fill="#353C50" StrokeEndLineCap="Round" Data="M2.5,12 C2.5,11.1716 3.17157,10.5 4,10.5 L20,10.5 C20.8284,10.5 21.5,11.1716 21.5,12 C21.5,12.8284 20.8284,13.5 20,13.5 L4,13.5 C3.17157,13.5 2.5,12.8284 2.5,12 Z" Stretch="Fill" Margin="9,11,9,11" Width="8" Height="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid x:Name="MinBtn" Cursor="Hand" Background="Transparent" MouseLeftButtonDown="MinClick" Height="30" Width="30" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,72,0">
+                        <Viewbox Stretch="Uniform" Width="8" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path Fill="#353C50" StrokeEndLineCap="Round" Data="M2.5,12 C2.5,11.1716 3.17157,10.5 4,10.5 L20,10.5 C20.8284,10.5 21.5,11.1716 21.5,12 C21.5,12.8284 20.8284,13.5 20,13.5 L4,13.5 C3.17157,13.5 2.5,12.8284 2.5,12 Z"/>
+                        </Viewbox>
                     </Grid>
                     <!--#endregion-->
                     <StackPanel Margin="60,0,186,0" CanVerticallyScroll="True" Width="554" Height="43" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
